@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
 
 .start-picture {
-    height: 92dvh;
+    height: 92svh;
     width: 100vw;
     object-fit: cover;
 }
@@ -20,14 +20,14 @@
 }
 .navbar-brand img {
     height: 100%;
-    max-height: 55px;
+    max-height: 45px;
     width: auto;
     position: absolute;
     margin-top: -27px;
     margin-left: 30px;
 }
 .navbar {
-    height: 8dvh;
+    height: 8svh;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
