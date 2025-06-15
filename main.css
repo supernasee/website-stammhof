@@ -27,7 +27,7 @@
     margin-left: 30px;
 }
 .navbar {
-    height: 8svh;
+    height: 9svh;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -40,6 +40,11 @@
     .navbar-collapse {
         background-color: transparent;
         border-radius: 0;
+    }
+
+    .navbar {
+        height: 8svh;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -80,6 +85,10 @@
 
 .nav-link-ltr:hover::before {
     width: 100%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none!important;
 }
 
 .welcome-title {
