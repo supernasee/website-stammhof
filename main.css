@@ -120,7 +120,7 @@ a {
     color: black;
     padding: 0;
     box-sizing: border-box;
-    z-index: 150;
+    z-index: 10000;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -179,6 +179,18 @@ a {
     a {
         color: #0b4019;
     }
+}
+
+.sidenav-links li ul li.active {
+    transform: translateX(0.7rem);
+    a {
+        color: #0b4019;
+    }
+}
+
+.sidenav-sub-menu {
+    list-style: none;
+    margin-top: 10px;
 }
 
 .open {
@@ -269,7 +281,8 @@ a {
     text-decoration: none;
     color: #000000;
     padding: 20px 0;
-    margin: 0 20px;
+    margin-right: 20px;
+    margin-bottom: 13px;
     display: inline-block;
     position: relative;
     opacity: 0.75;
@@ -356,8 +369,10 @@ a {
 }
 
 #map {
+    position: relative;
     width: 100%;
     height: 50vh;
+    z-index: 10;
 }
 
 .img-fluid {
