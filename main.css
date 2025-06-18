@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .start-picture {
     height: 92svh;
     width: 100vw;
@@ -49,7 +54,8 @@
 }
 
 .dropdown-menu {
-    width: 90%;
+    background-color: white;
+    width: 100%;
     margin-left: 5%;
 }
 
@@ -102,6 +108,91 @@
 .nav-link-ltr::before {
     width: 0;
     bottom: 10px;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidenav-logo img {
+    z-index: 60;
+    padding: 1rem;
+    height: 11.5svh;
+    width: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    z-index: 60;
+}
+
+.sidenav-links {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 1rem;
+    color: black;
+}
+
+.sidenav-links li {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.sidenav-links li:hover {
+    transform: translateX(0.7rem) ;
+}
+
+.sidenav-links  li.none:hover {
+    transform: translateX(0);
+}
+
+.sidenav-links li.active.none:hover {
+    transform: translateX(0.7rem);
+}
+
+.sidenav-links li.active {
+    transform: translateX(0.7rem);
+    a {
+        color: #0b4019;
+    }
+}
+
+.open {
+    width: 70vw;
+}
+
+@media screen and (min-width: 768px) {
+    .open {
+        width: 30vw;
+    }
+}
+
+.dropdown-menu li a {
+    margin-left: 10px;
 }
 
 .navbar-toggler:focus {
@@ -174,6 +265,7 @@
 
 
 .footer-link {
+    text-align: start;
     text-decoration: none;
     color: #000000;
     padding: 20px 0;
@@ -181,6 +273,7 @@
     display: inline-block;
     position: relative;
     opacity: 0.75;
+    transition: color 0.2s;
 }
 
 .footer-link.active {
@@ -192,21 +285,23 @@
     color: #9EBC8A !important;
 }
 
-.footer-link::before {
-    transition: 300ms;
-    height: 5px;
-    content: "";
-    position: absolute;
-    background-color: #D2D0A0;
-}
+@media screen and (min-width: 1200px) {
+    .footer-link::before {
+        transition: 300ms;
+        height: 5px;
+        content: "";
+        position: absolute;
+        background-color: #D2D0A0;
+    }
 
-.footer-link-ltr::before {
-    width: 0;
-    bottom: 10px;
-}
+    .footer-link-ltr::before {
+        width: 0;
+        bottom: 10px;
+    }
 
-.footer-link-ltr:hover::before {
-    width: 100%;
+    .footer-link-ltr:hover::before {
+        width: 100%;
+    }
 }
 
 .min-h {
