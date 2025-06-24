@@ -67,11 +67,17 @@ a {
     }
 
     .navbar {
-        height: 8svh;
+        height: 10svh;
     }
 
     .nav-link-ltr:hover::before {
         width: 100%;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .navbar {
+        height: 8svh;
     }
 }
 
