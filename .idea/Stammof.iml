@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="@splidejs/splide" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
+    <orderEntry type="library" name="flowbite" level="application" />
   </component>
 </module>

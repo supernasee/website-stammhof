@@ -6,13 +6,9 @@ a {
 }
 
 .start-picture {
-    height: 92svh;
+    height: 75svh;
     width: 100vw;
     object-fit: cover;
-}
-
-.h-80vh {
-    height: 95vh;
 }
 
 .h-15vh {
@@ -38,6 +34,7 @@ a {
 }
 .navbar {
     height: 9svh;
+    min-height: 60px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -222,16 +219,12 @@ a {
     width: 100%;
     font-weight: 700;
     color: #18241b;
-    font-size: clamp(2rem, 6vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     transition: font-size 0.4s ease-in-out;
 }
 
-.welcome-title:hover {
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-}
-
 .down-arrow {
-    animation: bounce 1.5s infinite ease-in-out;
+    animation: bounce 3s infinite ease-in-out;
     font-size: clamp(3rem, 6vw, 4rem);
     display: inline-block;
     color: #18241b;
