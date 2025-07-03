@@ -386,3 +386,14 @@ a {
 .img-fluid:hover {
     transform: scale(1.05);
 }
+
+.scroll {
+    opacity: 0;
+    transition: all 0.8s;
+    transform: translateY(30px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}

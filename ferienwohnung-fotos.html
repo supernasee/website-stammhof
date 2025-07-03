@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="img/square-logo.png"/>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="shortcut icon" href="assets/img/square-logo.png"/>
     <title>Stammhof Albers</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="assets/scroll.js"></script>
 </head>
 <body>
 <div class="min-h">
@@ -15,7 +17,7 @@
         <nav class="navbar navbar-expand-xl">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" alt="Logo">
+                    <img src="assets/img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler navbar-toggle" type="button" id="hamburger-button">
                     <span class="navbar-toggler-icon"></span>
@@ -42,7 +44,7 @@
         </nav>
         <div id="side-nav" class="side-nav relative">
             <a class="sidenav-logo" href="index.html">
-                <img src="img/logo.png" alt="Logo">
+                <img src="assets/img/logo.png" alt="Logo">
             </a>
             <p id="close-button" class="close-button">x</p>
             <ul class="sidenav-links">
@@ -66,74 +68,79 @@
         </div>
     </div>
     <div class="ferienwohnung-fotos-container mb-5">
-        <p class="title p-5 text-center">Fotos</p>
-        <p class="fs-5 mt-5"><strong>Wohnung "Bauernrose"</strong> (Erdgeschoss, rechts)</p>
-        <section id="image-carousel-1" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <p class="fs-5 label"><strong>Wohnung "Pusteblume"</strong> (Erdgeschoss, links)</p>
-        <section id="image-carousel-2" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <p class="fs-5 label"><strong>Wohnung "Gänseblümchen"</strong> (Obergeschoss, rechts)</p>
-        <section id="image-carousel-3" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <p class="fs-5 label"><strong>Wohnung "Rittersporn"</strong> (Obergeschoss, links)</p>
-        <section id="image-carousel-4" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/placeholder.webp" alt="">
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <p class="title p-5 text-center scroll">Fotos</p>
+        <div class="scroll">
+            <p class="fs-5 mt-5"><strong>Wohnung "Bauernrose"</strong> (Erdgeschoss, rechts)</p>
+            <section id="image-carousel-1" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="scroll">
+            <p class="fs-5 label"><strong>Wohnung "Pusteblume"</strong> (Erdgeschoss, links)</p>
+            <section id="image-carousel-2" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="scroll">
+            <p class="fs-5 label"><strong>Wohnung "Gänseblümchen"</strong> (Obergeschoss, rechts)</p>
+            <section id="image-carousel-3" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="scroll">
+            <p class="fs-5 label"><strong>Wohnung "Rittersporn"</strong> (Obergeschoss, links)</p>
+            <section id="image-carousel-4" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/placeholder.webp" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
 <div class="footer">
