@@ -25,7 +25,7 @@ a {
 }
 
 .navbar-brand img {
-    height: 80%;
+    height: 70%;
     width: auto;
     position: absolute;
     margin-top: -27px;
@@ -163,33 +163,29 @@ a {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .sidenav-links li:hover {
-    transform: translateX(0.7rem) ;
-}
-
-.sidenav-links  li.none:hover {
-    transform: translateX(0);
-}
-
-.sidenav-links li.active.none:hover {
-    transform: translateX(0.7rem);
+    a {
+        color: #0b4019;
+    }
 }
 
 .sidenav-links li.active {
-    transform: translateX(0.7rem);
     a {
         color: #0b4019;
     }
 }
 
-.sidenav-links li ul li.active {
-    transform: translateX(0.7rem);
-    a {
-        color: #0b4019;
-    }
+.navbar-link.text-black:hover {
+    color: #0b4019 !important;
 }
+
+.navbar-link.text-black.active {
+    color: #0b4019 !important;
+}
+
 
 .sidenav-sub-menu {
     list-style: none;
@@ -242,10 +238,21 @@ a {
 
 .home-text-container {
     width: 80vw;
-    margin-left: 10vw;
-    min-height: 74vh;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
+    min-height: 72vh;
+    display: block;
+    text-align: center;
+}
+
+.welcome-text {
+    width: 80vw;
+    margin: 0 auto 40px auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .welcome-text {
+        width: 50vw;
+    }
 }
 
 .text-container {
@@ -260,9 +267,7 @@ a {
 }
 
 .footer {
-    border-top: #9EBC8A 1px solid;
     min-height: 10vh;
-    background-color: rgba(243, 243, 243, 1) !important;
     align-items: center;
     display: flex;
 }
@@ -317,7 +322,7 @@ a {
 }
 
 .min-h {
-    min-height: 90vh;
+    min-height: 88vh;
 }
 
 .bauernhof-list {

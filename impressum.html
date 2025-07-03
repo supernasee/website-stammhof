@@ -22,7 +22,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="bauernhof.html">Der Bauernhof</a></li>
+<!--                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="bauernhof.html">Der Bauernhof</a></li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-link-ltr" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">Die Ferienwohnungen</a>
@@ -46,9 +46,12 @@
             <p id="close-button" class="close-button">x</p>
             <ul class="sidenav-links">
                 <li class="nav-item"><a class="navbar-link" aria-current="page" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="navbar-link" href="bauernhof.html">Der Bauernhof</a></li>
-                <li class="nav-item none dropdown">
-                    <p class="navbar-link dropdown-toggle">Die Ferienwohnungen</p>
+<!--                <li class="nav-item"><a class="navbar-link" href="bauernhof.html">Der Bauernhof</a></li>-->
+                <li id="closedMenu" class="nav-item none">
+                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏵</p>
+                </li>
+                <li id="openMenu" class="nav-item none d-none">
+                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏷</p>
                     <ul class="sidenav-sub-menu">
                         <li><a class="navbar-link text-black" href="ferienwohnung-details.html">Details</a></li>
                         <li><a class="navbar-link text-black" href="ferienwohnung-preise.html">Preise</a></li>
@@ -87,6 +90,7 @@
 </div>
 <div class="footer">
     <div class="row g-0 mt-3 footer-grid d-flex">
+        <hr>
         <div class="col-md-8 col-12 d-flex align-items-center">
             <p>Copyright © Stammhof Albers - H. Albers</p>
         </div>
@@ -104,6 +108,18 @@
     });
     closeButton.addEventListener("click", () => {
         document.getElementById("side-nav").classList.toggle("open");
+    });
+
+    const closedMenu = document.getElementById("closedMenu");
+    const openMenu = document.getElementById("openMenu");
+
+    const buttons = document.getElementsByClassName("nav-dropdown");
+    Array.from(buttons).forEach(button => {
+        button.addEventListener("click", () => {
+            console.log("clicked");
+            closedMenu.classList.toggle("d-none");
+            openMenu.classList.toggle("d-none");
+        })
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
