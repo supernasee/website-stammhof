@@ -3,7 +3,7 @@
 
 :root {
     --text-color: #333333;
-    --bg-color: #F5F3EE;
+    --bg-color: #f8f8f8;
     --primary-color: #0b4019; /* active links */
     --secondary-color: #9EBC8A; /* hover links */
     --accent-color: #D2D0A0; /* decoration links */
@@ -43,7 +43,7 @@ a {
     height: 70%;
     width: auto;
     position: absolute;
-    margin-top: -27px;
+    margin-top: -25px;
     margin-left: 30px;
     z-index: 150;
 }
