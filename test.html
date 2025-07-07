@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARBORÉA - Home</title>
+    <meta name="description" content="ARBORÉA bietet dir eine Auszeit vom Alltag – naturnahe Erholung, Wellness und Ruhe inmitten der Natur. Entdecke dein neues Lieblingsresort." />
+    <meta name="keywords" content="Erholung, Wellness, Resort, Natur, Urlaub, ARBORÉA, Entspannung" />
+    <meta name="author" content="Jan Albers" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src="assets/js/scroll.js"></script>
+</head>
+<body>
+<div class="relative">
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="#" class="">
+            <img src="assets/img/logo.png" alt="">
+        </a></div>
+        <button id="hamburger-button" class="navbar-burger">☰</button>
+        <ul class="navbar__links">
+            <li><a class="navbar-link active" href="#">Home</a></li>
+            <li><a class="navbar-link" href="#">Die Ferienwohnungen</a></li>
+            <li><a class="navbar-link" href="#">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="#">Fotos</a></li>
+        </ul>
+        <div class="navbar__button">
+            <a href="#">Kontakt</a>
+        </div>
+
+    </nav>
+    <div id="side-nav" class="side-nav relative">
+        <p class="sidenav-title">ARBORÉA</p>
+        <p id="close-button" class="close-button">x</p>
+        <ul class="sidenav-links">
+            <li class="active"><a class="navbar-link" href="#">Home</a></li>
+            <li><a class="navbar-link" style="white-space: nowrap;" href="#">Die Ferienwohnungen</a></li>
+            <li><a class="navbar-link" href="#">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="#">Fotos</a></li>
+            <li><a class="navbar-link" href="#">Kontakt</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="hero" >
+            <img src="assets/img/hof-front.JPG">
+        </div>
+        <div class="image-overlay"></div>
+        <div id="title" class="text-container opacity-0">
+            <p class="title title-grow">Stammhof Albers</p>
+            <p class="subtitle">Zurück zur Natur – zurück zu dir.</p>
+        </div>
+    </div>
+    <div class="grid-container">
+
+    </div>
+    <div class="footer">
+        <div class="footer-copyright">© 2025 <a class="mail-link" href="mailto:j.albers.inf24@stud.bbbaden.ch">Jan Albers</a></div>
+        <div class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutzerklärung</a>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const navLinks = navbar.querySelectorAll(".navbar-link");
+            if (window.scrollY > 10) {
+                navbar.classList.add("scrolled");
+                navLinks.forEach(link => link.classList.add("scrolled"));
+            } else {
+                navbar.classList.remove("scrolled");
+                navLinks.forEach(link => link.classList.remove("scrolled"));
+            }
+            if (window.scrollY > 120) {
+                navbar.classList.add("finished");
+            } else {
+                navbar.classList.remove("finished");
+            }
+        });
+
+        document.querySelectorAll('.navbar-link').forEach(el => {
+            el.style.setProperty('--label', `"${el.textContent}"`);
+        });
+
+        const hamburgerButton = document.getElementById("hamburger-button");
+        const closeButton = document.getElementById("close-button");
+        hamburgerButton.addEventListener("click", () => {
+            document.getElementById("side-nav").style.width = "70vw";
+        });
+        closeButton.addEventListener("click", () => {
+            document.getElementById("side-nav").style.width = "0";
+        });
+    })
+</script>
+</body>
+</html>
