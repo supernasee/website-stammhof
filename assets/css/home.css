@@ -8,7 +8,7 @@ html, body {
     font-style: normal;
     background-color: #f8f8f8;
     padding: 0;
-    margin: 0;
+    margin: -0.5px 0 0 0;
 }
 
 a {
@@ -43,6 +43,7 @@ a {
 }
 
 .navbar-logo {
+    margin-top: 7px;
     height: 55px;
     width: auto;
     color: white;
@@ -52,6 +53,10 @@ a {
 .navbar-logo a img {
     height: 100%;
     width: 100%;
+}
+
+.logo {
+    transition: filter 0.8s;
 }
 
 .navbar__links {
@@ -73,11 +78,7 @@ a {
     font-size: 1.5rem !important;
 }
 
-.navbar-burger:focus {
-
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .navbar__links {
         list-style: none;
         display: flex;
@@ -188,7 +189,7 @@ a {
     }
 }
 
-.container {
+.hero-container {
     margin: 0;
     position: relative;
     height: 100svh;
@@ -286,19 +287,27 @@ a {
     overflow: hidden;
 }
 
-.sidenav-title {
-    padding: 1rem;
-    font-weight: bold;
-    font-size: 1.5rem;
+.sidenav-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: max-content;
+    padding-left: 2rem;
     color: white;
     cursor: pointer;
+}
+
+.sidenav-logo a img {
+    height: 100%;
+    width: 100%;
 }
 
 .close-button {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
@@ -308,7 +317,7 @@ a {
 
 .sidenav-links {
     list-style: none;
-    padding: 1rem;
+    padding: 6rem 1rem 0 1rem;
     font-weight: bold;
     font-size: 1.2rem;
     color: white;
@@ -416,7 +425,7 @@ a {
 
 @media (min-width: 768px) {
     .title, .loader-text {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .subtitle {
@@ -435,7 +444,7 @@ a {
     }
 }
 
-.grid-container {
+.content-container {
     position: relative;
     z-index: 5;
     width: 100%;
@@ -505,7 +514,7 @@ a {
 }
 
 @media (min-width: 992px) {
-    .grid-container {
+    .content-container {
         padding-left: 5rem;
         padding-right: 5rem;
     }

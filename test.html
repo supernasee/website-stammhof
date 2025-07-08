@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ARBORÉA - Home</title>
-    <meta name="description" content="ARBORÉA bietet dir eine Auszeit vom Alltag – naturnahe Erholung, Wellness und Ruhe inmitten der Natur. Entdecke dein neues Lieblingsresort." />
-    <meta name="keywords" content="Erholung, Wellness, Resort, Natur, Urlaub, ARBORÉA, Entspannung" />
+    <title>Stammhof Albers</title>
     <meta name="author" content="Jan Albers" />
     <meta name="robots" content="index, follow" />
 
+    <link rel="shortcut icon" href="assets/img/square-logo.png"/>
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +18,11 @@
 <body>
 <div class="relative">
     <nav class="navbar">
-        <div class="navbar-logo"><a href="#" class="">
-            <img src="assets/img/logo.png" alt="">
-        </a></div>
+        <div class="navbar-logo">
+            <a href="#" class="">
+                <img src="assets/img/logo_white.png" alt="" class="logo">
+            </a>
+        </div>
         <button id="hamburger-button" class="navbar-burger">☰</button>
         <ul class="navbar__links">
             <li><a class="navbar-link active" href="#">Home</a></li>
@@ -35,7 +36,11 @@
 
     </nav>
     <div id="side-nav" class="side-nav relative">
-        <p class="sidenav-title">ARBORÉA</p>
+        <p class="sidenav-logo">
+            <a href="#" class="">
+                <img src="assets/img/logo_white.png" alt="">
+            </a>
+        </p>
         <p id="close-button" class="close-button">x</p>
         <ul class="sidenav-links">
             <li class="active"><a class="navbar-link" href="#">Home</a></li>
@@ -45,18 +50,35 @@
             <li><a class="navbar-link" href="#">Kontakt</a></li>
         </ul>
     </div>
-    <div class="container">
+    <div class="hero-container">
         <div class="hero" >
             <img src="assets/img/hof-front.JPG">
         </div>
         <div class="image-overlay"></div>
-        <div id="title" class="text-container opacity-0">
+        <div id="title" class="text-container opacity-0 scroll">
             <p class="title title-grow">Stammhof Albers</p>
-            <p class="subtitle">Zurück zur Natur – zurück zu dir.</p>
+            <p class="subtitle">Der Ferienhof im Elbe Weser Dreieck</p>
         </div>
     </div>
-    <div class="grid-container">
-
+    <div class="content-container">
+        <div class="welcome-text scroll">
+            <p class="title">Herzlich Willkommen</p>
+            <p>Wir begrüßen Sie ganz herzlich auf dem Stammhof Albers in Steddorf. Unser Hof liegt am Rande der nördlichen Lüneburger Heide, im Elbe Weser Dreieck. <strong>40km von Hamburg & Bremen</strong>, 30km von Stade, 20km von Buxtehude und 10km von Zeven entfernt.</p>
+            <p>Auf einem im Nebenerwerb bewirtschafteten Hof mit altem Baumbestand und großflächigen Grünanlagen leben Pferde, Ponys, Hund Tilda, Kaninchen und Katzen.</p>
+            <p>Es gibt vielfältige Möglichkeiten für Freizeit und Sport.</p>
+            <p>Für Autos gibt es einen <strong>grossen Parkplatz</strong> mit genug Platz, auch für grössere Fahrzeuge.</p>
+        </div>
+        <div class="row mt-5 g-0">
+            <div class="col-lg-4 col-md-12 scroll p-3">
+                <img src="assets/img/placeholder.webp" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-12 scroll p-3">
+                <img src="assets/img/placeholder.webp" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-12 scroll p-3">
+                <img src="assets/img/placeholder.webp" class="img-fluid">
+            </div>
+        </div>
     </div>
     <div class="footer">
         <div class="footer-copyright">© 2025 <a class="mail-link" href="mailto:j.albers.inf24@stud.bbbaden.ch">Jan Albers</a></div>
@@ -70,13 +92,16 @@
     document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("scroll", function () {
             const navbar = document.querySelector(".navbar");
+            const logo = document.querySelector(".logo");
             const navLinks = navbar.querySelectorAll(".navbar-link");
             if (window.scrollY > 10) {
                 navbar.classList.add("scrolled");
                 navLinks.forEach(link => link.classList.add("scrolled"));
+                logo.style.filter = "invert(1)";
             } else {
                 navbar.classList.remove("scrolled");
                 navLinks.forEach(link => link.classList.remove("scrolled"));
+                logo.style.filter = "none";
             }
             if (window.scrollY > 120) {
                 navbar.classList.add("finished");
