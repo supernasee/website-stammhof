@@ -62,20 +62,20 @@
     </div>
     <div class="content-container">
         <div class="welcome-text scroll">
-            <p class="title">Herzlich Willkommen</p>
+            <p class="text-title">Herzlich Willkommen</p>
             <p>Wir begrüßen Sie ganz herzlich auf dem Stammhof Albers in Steddorf. Unser Hof liegt am Rande der nördlichen Lüneburger Heide, im Elbe Weser Dreieck. <strong>40km von Hamburg & Bremen</strong>, 30km von Stade, 20km von Buxtehude und 10km von Zeven entfernt.</p>
             <p>Auf einem im Nebenerwerb bewirtschafteten Hof mit altem Baumbestand und großflächigen Grünanlagen leben Pferde, Ponys, Hund Tilda, Kaninchen und Katzen.</p>
             <p>Es gibt vielfältige Möglichkeiten für Freizeit und Sport.</p>
             <p>Für Autos gibt es einen <strong>grossen Parkplatz</strong> mit genug Platz, auch für grössere Fahrzeuge.</p>
         </div>
-        <div class="row mt-5 g-0">
-            <div class="col-lg-4 col-md-12 scroll p-3">
+        <div class="grid">
+            <div class="grid-1 scroll">
                 <img src="assets/img/placeholder.webp" class="img-fluid">
             </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
+            <div class="grid-2 scroll">
                 <img src="assets/img/placeholder.webp" class="img-fluid">
             </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
+            <div class="grid-3 scroll">
                 <img src="assets/img/placeholder.webp" class="img-fluid">
             </div>
         </div>
@@ -116,11 +116,14 @@
 
         const hamburgerButton = document.getElementById("hamburger-button");
         const closeButton = document.getElementById("close-button");
+        const sideNav = document.getElementById("side-nav");
+
         hamburgerButton.addEventListener("click", () => {
-            document.getElementById("side-nav").style.width = "70vw";
+            sideNav.classList.add("open");
         });
+
         closeButton.addEventListener("click", () => {
-            document.getElementById("side-nav").style.width = "0";
+            sideNav.classList.remove("open");
         });
     })
 </script>
