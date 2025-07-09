@@ -45,7 +45,7 @@ a {
 .navbar-logo {
     margin-top: 7px;
     height: 55px;
-    width: auto;
+    width: 138px;
     color: white;
     cursor: pointer;
 }
@@ -203,7 +203,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
     object-fit: cover;
 }
@@ -273,7 +273,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 70vw;
+    width: 80vw;
     max-width: 400px;
     height: 100vh;
     background-color: #395439;
