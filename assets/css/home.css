@@ -209,7 +209,7 @@ a {
 }
 
 .hero img {
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
     object-fit: cover;
 }
@@ -221,7 +221,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    height: 100lvh;
+    height: 100svh;
     width: 100vw;
 }
 
@@ -293,7 +293,7 @@ a {
     top: 0;
     left: 0;
     height: 55px;
-    width: max-content;
+    width: 138px;
     padding-left: 2rem;
     color: white;
     cursor: pointer;
