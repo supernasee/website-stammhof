@@ -1,14 +1,19 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const title = document.getElementById("title");
-    setTimeout(() => {
-        title.classList.add("opacity-100");
-        title.classList.remove("opacity-0");
-    }, 400);
+    if (window.scrollY > 10) {
+        document.getElementById("navbar").classList.remove("scroll")
+    }
+
+    const titles = document.querySelectorAll(".fade-in");
+    titles.forEach(title => {
+        setTimeout(() => {
+            title.classList.add("opacity-100");
+        }, 500);
+    })
 
     const observer = new IntersectionObserver(async (entries, observer) => {
         for (const entry of entries) {
             if (entry.isIntersecting) {
-                await new Promise(r => setTimeout(r, 200));
+                await new Promise(r => setTimeout(r, 300));
                 entry.target.classList.add('show');
             }
         }

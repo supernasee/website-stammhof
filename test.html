@@ -8,46 +8,56 @@
     <meta name="robots" content="index, follow" />
 
     <link rel="shortcut icon" href="assets/img/square-logo.png"/>
-    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+
     <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/sideNav.js"></script>
 </head>
 <body>
 <div class="relative">
-    <nav class="navbar">
+    <nav id="navbar" class="navbar scroll">
         <div class="navbar-logo">
-            <a href="#" class="">
+            <a href="test.html" class="">
                 <img src="assets/img/logo_white.png" alt="" class="logo">
             </a>
         </div>
         <button id="hamburger-button" class="navbar-burger">☰</button>
         <ul class="navbar__links">
-            <li><a class="navbar-link active" href="#">Home</a></li>
-            <li><a class="navbar-link" href="#">Die Ferienwohnungen</a></li>
-            <li><a class="navbar-link" href="#">Aktivitäten</a></li>
-            <li><a class="navbar-link" href="#">Fotos</a></li>
+            <li><a class="navbar-link active" href="test.html">Home</a></li>
+            <li><a class="navbar-link dropdown-button">Die Ferienwohnungen</a></li>
+            <li><a class="navbar-link" href="aktivitaeten2.html">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="fotos2.html">Fotos</a></li>
         </ul>
         <div class="navbar__button">
-            <a href="#">Kontakt</a>
+            <a href="kontakt2.html">Kontakt</a>
         </div>
-
     </nav>
+    <div class="dropdown">
+        <ul>
+            <li><a class="navbar-link" href="ferienwohnung-details2.html">Details</a></li>
+            <li><a class="navbar-link" href="ferienwohnung-preise2.html">Preise</a></li>
+            <li><a class="navbar-link" href="ferienwohnung-fotos2.html">Fotos</a></li>
+        </ul>
+    </div>
     <div id="side-nav" class="side-nav relative">
         <p class="sidenav-logo">
-            <a href="#" class="">
+            <a href="test.html" class="">
                 <img src="assets/img/logo_white.png" alt="">
             </a>
         </p>
         <p id="close-button" class="close-button">x</p>
         <ul class="sidenav-links">
-            <li class="active"><a class="navbar-link" href="#">Home</a></li>
+            <li class="active"><a class="navbar-link" href="test.html">Home</a></li>
             <li><a class="navbar-link" style="white-space: nowrap;" href="#">Die Ferienwohnungen</a></li>
-            <li><a class="navbar-link" href="#">Aktivitäten</a></li>
-            <li><a class="navbar-link" href="#">Fotos</a></li>
-            <li><a class="navbar-link" href="#">Kontakt</a></li>
+            <li><a class="navbar-link" href="aktivitaeten2.html">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="fotos2.html">Fotos</a></li>
+            <li><a class="navbar-link" href="kontakt2.html">Kontakt</a></li>
         </ul>
     </div>
     <div class="hero-container">
@@ -55,7 +65,7 @@
             <img src="assets/img/hof-front.JPG">
         </div>
         <div class="image-overlay"></div>
-        <div id="title" class="text-container opacity-0 scroll">
+        <div class="text-container fade-in">
             <p class="title title-grow">Stammhof Albers</p>
             <p class="subtitle">Der Ferienhof im Elbe Weser Dreieck</p>
         </div>
@@ -88,44 +98,5 @@
         </div>
     </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector(".navbar");
-            const logo = document.querySelector(".logo");
-            const navLinks = navbar.querySelectorAll(".navbar-link");
-            if (window.scrollY > 10) {
-                navbar.classList.add("scrolled");
-                navLinks.forEach(link => link.classList.add("scrolled"));
-                logo.style.filter = "invert(1)";
-            } else {
-                navbar.classList.remove("scrolled");
-                navLinks.forEach(link => link.classList.remove("scrolled"));
-                logo.style.filter = "none";
-            }
-            if (window.scrollY > 120) {
-                navbar.classList.add("finished");
-            } else {
-                navbar.classList.remove("finished");
-            }
-        });
-
-        document.querySelectorAll('.navbar-link').forEach(el => {
-            el.style.setProperty('--label', `"${el.textContent}"`);
-        });
-
-        const hamburgerButton = document.getElementById("hamburger-button");
-        const closeButton = document.getElementById("close-button");
-        const sideNav = document.getElementById("side-nav");
-
-        hamburgerButton.addEventListener("click", () => {
-            sideNav.classList.add("open");
-        });
-
-        closeButton.addEventListener("click", () => {
-            sideNav.classList.remove("open");
-        });
-    })
-</script>
 </body>
 </html>
