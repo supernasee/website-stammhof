@@ -1,164 +1,141 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" href="assets/img/square-logo.png"/>
-    <title>Stammhof Albers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stammhof Albers</title>
+  <meta name="author" content="Jan Albers" />
+  <meta name="robots" content="index, follow" />
 
-    <script src="assets/js/scroll.js"></script>
+  <link rel="shortcut icon" href="assets/img/square-logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/sites.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/scroll.js"></script>
+  <script src="assets/js/sideNav.js"></script>
 </head>
 <body>
-<div class="min-h">
-    <div class="sticky-top bg-white z-100">
-        <nav class="navbar navbar-expand-xl">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo_black.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler navbar-toggle" type="button" id="hamburger-button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a></li>
-<!--                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="bauernhof.html">Der Bauernhof</a></li>-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-link-ltr" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">Die Ferienwohnungen</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-details.html">Details</a></li>
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-preise.html">Preise</a></li>
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-fotos.html">Fotos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr active" href="aktivitaeten.html">Aktivitäten</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="fotos.html">Fotos</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="side-nav" class="side-nav relative">
-            <a class="sidenav-logo" href="index.html">
-                <img src="assets/img/logo_black.png" alt="Logo">
-            </a>
-            <p id="close-button" class="close-button">x</p>
-            <ul class="sidenav-links">
-                <li class="nav-item"><a class="navbar-link" aria-current="page" href="index.html">Home</a></li>
-<!--                <li class="nav-item"><a class="navbar-link" href="bauernhof.html">Der Bauernhof</a></li>-->
-                <li id="closedMenu" class="nav-item none">
-                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏵</p>
-                </li>
-                <li id="openMenu" class="nav-item none d-none">
-                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏷</p>
-                    <ul class="sidenav-sub-menu">
-                        <li><a class="navbar-link text-black" href="ferienwohnung-details.html">Details</a></li>
-                        <li><a class="navbar-link text-black" href="ferienwohnung-preise.html">Preise</a></li>
-                        <li><a class="navbar-link text-black" href="ferienwohnung-fotos.html">Fotos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item active"><a class="navbar-link" href="aktivitaeten.html">Aktivitäten</a></li>
-                <li class="nav-item"><a class="navbar-link" href="fotos.html">Fotos</a></li>
-                <li class="nav-item"><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </div>
+<div class="relative">
+  <nav id="navbar" class="navbar scroll">
+    <div class="navbar-logo">
+      <a href="index.html" class="">
+        <img src="assets/img/logo_white.png" alt="" class="logo">
+      </a>
     </div>
-    <div class="text-container">
-        <p class="title p-5 text-center scroll">Aktivitäten in und um Steddorf </p>
-        <p class="scroll">Steddorf ist sehr zentral zwischen Hamburg und Bremen gelegen und bietet in der näheren und weiteren Umgebung viele Attraktionen. Egal ob für Jung oder Alt, für Action-Liebhaber oder Relaxer - für jeden ist etwas dabei. <br>Im Dorf selber gibt es eine Gaststätte. Ein Supermarkt sowie eine 1000-jährige Feldsteinkirche und ein Heimathaus mit Museum befinden sich im benachbarten Heeslingen. Wer wandern möchte ist nach kurzer Entfernung bereits im Wald. Inlineskating und Walking sind auf den gut ausgebauten ebenerdigen Radwegen möglich.</p>
-        <br>
-        <p class="fw-bold scroll">Beliebte Ausflugsziele:</p>
-        <ul class="scroll">
-            <li>Feuerwehrmuseum in Zeven</li>
-            <li>Künstlerdorf Worpswede</li>
-            <li>Altes Land</li>
-            <li>Stader und Buxtehuder Altstadt</li>
-            <li>Heidepark Soltau</li>
-            <li>Naturschutzpark Lüneburger Heide</li>
-            <li>Vogelpark Walsrode</li>
-            <li>Wildpark Nindorf</li>
-            <li>die Hansestädte Hamburg und Bremen (ca. 50 km entfernt)</li>
-            <li>Inseln Helgoland und Neuwerk</li>
-            <li>Nordsee und Cuxhaven (ca. 1 Autostd.; Strandbäder, Wattlaufen)</li>
-            <li>Ostsee (ca. 1 Autostd.)</li>
-            <li>Diverse Freizeitparks (Hansepark, Magic Park etc.)</li>
-            <li>Tierpark Lauenbrück</li>
-        </ul>
-        <div class="row mt-5 g-0">
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-        </div>
-        <br>
-        <p class="fw-bold scroll">Aktivitäten auf dem Bauernhof:</p>
-        <p class="scroll">Zur Freizeitgestaltung stehen Kettcars, Spielplatz (Schaukel, Spielhäuschen, Sandkiste), ein großes Trampolin (überdacht), ein Grillplatz und eine Tischtennisplatte für Sie bereit. Treckerfahrten sind in der Feldmark möglich. Zudem können unsere Tiere (Pferde, Ponys, Ziege und Kaninchen) besucht werden. Das Reiten der Pferde und Ponys ist mit Aufsicht und Mithilfe der Eltern kostenlos möglich. </p>
-        <ul class="scroll">
-            <li>Grillecke</li>
-            <li>Liegewiese</li>
-            <li>Garten zum Ausspannen</li>
-            <li>Kinder Spielscheune</li>
-        </ul>
-        <p class="scroll">Reiten auf den Pferden ist nach Absprache möglich. Ein Reitplatz ist auf dem Hof.</p>
-        <p class="scroll">Die Kleinen haben einen großen Sandhaufen, das Spielhäuschen, Schaukel und auch Tischtennis oder dürfen auf dem Bauernhof mithelfen, beim Füttern dabei sein und auch auf dem Trecker mitfahren. </p>
-        <p class="scroll">Fahrradverleih wird nach Absprache angeboten, denn die abwechslungsreiche, ebene Landschaft lädt zu ausgedehnten erholsamen Radtouren ein. Radwanderkarten werden gern ausgeliehen. </p>
-        <p class="scroll">Ein Freibad befindet sich in Heeslingen (4 km), Hallen- und Naturbad in Zeven (10 km), Kanufahrten auf der Oste (4 km), Waldspielplatz im großsen Holz in Zeven und ein Wasserspielplatz in Farven (8 km). </p>
-        <p class="scroll">Auch im Winter gibt es viel zum Unternehmen. Zum Beispiel die Kunsteislaufbahn in Harsefeld oder die Spielscheune in Harsefeld für die Kleinsten.</p>
-        <div class="row mt-5 g-0">
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-12 scroll p-3">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-        </div>
+    <button id="hamburger-button" class="navbar-burger">☰</button>
+    <ul class="navbar__links">
+      <li><a class="navbar-link" href="index.html">Home</a></li>
+      <li><a class="navbar-link dropdown-button">Die Ferienwohnungen</a></li>
+      <li><a class="navbar-link active" href="aktivitaeten.html">Aktivitäten</a></li>
+      <li><a class="navbar-link" href="fotos.html">Fotos</a></li>
+    </ul>
+    <div class="navbar__button">
+      <a href="kontakt.html">Kontakt</a>
     </div>
+  </nav>
+  <div class="dropdown">
+    <ul>
+      <li><a class="navbar-link" href="ferienwohnung-details.html">Details</a></li>
+      <li><a class="navbar-link" href="ferienwohnung-preise.html">Preise</a></li>
+      <li><a class="navbar-link" href="ferienwohnung-fotos.html">Fotos</a></li>
+    </ul>
+  </div>
+  <div id="side-nav" class="side-nav relative">
+    <p class="sidenav-logo">
+      <a href="index.html" class="">
+        <img src="assets/img/logo_white.png" alt="">
+      </a>
+    </p>
+    <p id="close-button" class="close-button">x</p>
+    <ul class="sidenav-links">
+      <li class="active"><a class="navbar-link" href="index.html">Home</a></li>
+      <li><a class="navbar-link" style="white-space: nowrap;" href="#">Die Ferienwohnungen</a></li>
+      <li><a class="navbar-link" href="aktivitaeten.html">Aktivitäten</a></li>
+      <li><a class="navbar-link" href="fotos.html">Fotos</a></li>
+      <li><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="hero-container">
+    <div class="hero" >
+      <img src="assets/img/placeholder.webp">
+    </div>
+    <div class="image-overlay"></div>
+    <div class="text-container fade-in">
+      <p class="title title-grow">Aktivitäten</p>
+    </div>
+  </div>
+  <div class="content-container">
+    <p class="content-title scroll">Aktivitäten in und um Steddorf </p>
+    <p class="scroll">Steddorf ist sehr zentral zwischen Hamburg und Bremen gelegen und bietet in der näheren und weiteren Umgebung viele Attraktionen. Egal ob für Jung oder Alt, für Action-Liebhaber oder Relaxer - für jeden ist etwas dabei. <br>Im Dorf selber gibt es eine Gaststätte. Ein Supermarkt sowie eine 1000-jährige Feldsteinkirche und ein Heimathaus mit Museum befinden sich im benachbarten Heeslingen. Wer wandern möchte ist nach kurzer Entfernung bereits im Wald. Inlineskating und Walking sind auf den gut ausgebauten ebenerdigen Radwegen möglich.</p>
+    <br>
+    <p class="bold scroll">Beliebte Ausflugsziele:</p>
+    <ul class="scroll">
+      <li>Feuerwehrmuseum in Zeven</li>
+      <li>Künstlerdorf Worpswede</li>
+      <li>Altes Land</li>
+      <li>Stader und Buxtehuder Altstadt</li>
+      <li>Heidepark Soltau</li>
+      <li>Naturschutzpark Lüneburger Heide</li>
+      <li>Vogelpark Walsrode</li>
+      <li>Wildpark Nindorf</li>
+      <li>die Hansestädte Hamburg und Bremen (ca. 50 km entfernt)</li>
+      <li>Inseln Helgoland und Neuwerk</li>
+      <li>Nordsee und Cuxhaven (ca. 1 Autostd.; Strandbäder, Wattlaufen)</li>
+      <li>Ostsee (ca. 1 Autostd.)</li>
+      <li>Diverse Freizeitparks (Hansepark, Magic Park etc.)</li>
+      <li>Tierpark Lauenbrück</li>
+    </ul>
+    <div class="grid">
+      <div class="grid-1 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+      <div class="grid-2 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+      <div class="grid-3 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+    </div>
+    <br>
+    <p class="content-title scroll">Aktivitäten auf dem Bauernhof:</p>
+    <p class="scroll">Zur Freizeitgestaltung stehen Kettcars, Spielplatz (Schaukel, Spielhäuschen, Sandkiste), ein großes Trampolin (überdacht), ein Grillplatz und eine Tischtennisplatte für Sie bereit. Treckerfahrten sind in der Feldmark möglich. Zudem können unsere Tiere (Pferde, Ponys, Ziege und Kaninchen) besucht werden. Das Reiten der Pferde und Ponys ist mit Aufsicht und Mithilfe der Eltern kostenlos möglich. </p>
+    <ul class="scroll">
+      <li>Grillecke</li>
+      <li>Liegewiese</li>
+      <li>Garten zum Ausspannen</li>
+      <li>Kinder Spielscheune</li>
+    </ul>
+    <p class="scroll">Reiten auf den Pferden ist nach Absprache möglich. Ein Reitplatz ist auf dem Hof.</p>
+    <p class="scroll">Die Kleinen haben einen großen Sandhaufen, das Spielhäuschen, Schaukel und auch Tischtennis oder dürfen auf dem Bauernhof mithelfen, beim Füttern dabei sein und auch auf dem Trecker mitfahren. </p>
+    <p class="scroll">Fahrradverleih wird nach Absprache angeboten, denn die abwechslungsreiche, ebene Landschaft lädt zu ausgedehnten erholsamen Radtouren ein. Radwanderkarten werden gern ausgeliehen. </p>
+    <p class="scroll">Ein Freibad befindet sich in Heeslingen (4 km), Hallen- und Naturbad in Zeven (10 km), Kanufahrten auf der Oste (4 km), Waldspielplatz im großsen Holz in Zeven und ein Wasserspielplatz in Farven (8 km). </p>
+    <p class="scroll">Auch im Winter gibt es viel zum Unternehmen. Zum Beispiel die Kunsteislaufbahn in Harsefeld oder die Spielscheune in Harsefeld für die Kleinsten.</p>
+    <div class="grid">
+      <div class="grid-1 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+      <div class="grid-2 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+      <div class="grid-3 scroll">
+        <img src="assets/img/placeholder.webp" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-copyright">© 2025 <a class="mail-link" href="mailto:info@stammhof-albers.de">Stammhof Albers</a></div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+    </div>
+  </div>
 </div>
-<div class="footer">
-    <div class="row g-0 mt-3 footer-grid d-flex">
-        <hr>
-        <div class="col-md-8 col-12 d-flex align-items-center">
-            <p>Copyright © Stammhof Albers - H. Albers</p>
-        </div>
-        <div class="col-md-4 col-12 d-flex justify-content-md-end justify-content-start">
-            <a class="d-inline-flex footer-link footer-link-ltr" href="impressum.html">Impressum</a>
-            <a class="d-inline-flex footer-link footer-link-ltr" href="datenschutzerklaerung.html">Datenschutzerklärung</a>
-        </div>
-    </div>
-</div>
-<script>
-    const hamburgerButton = document.getElementById("hamburger-button");
-    const closeButton = document.getElementById("close-button");
-    hamburgerButton.addEventListener("click", () => {
-        document.getElementById("side-nav").classList.toggle("open");
-    });
-    closeButton.addEventListener("click", () => {
-        document.getElementById("side-nav").classList.toggle("open");
-    });
-
-    const closedMenu = document.getElementById("closedMenu");
-    const openMenu = document.getElementById("openMenu");
-
-    const buttons = document.getElementsByClassName("nav-dropdown");
-    Array.from(buttons).forEach(button => {
-        button.addEventListener("click", () => {
-            console.log("clicked");
-            closedMenu.classList.toggle("d-none");
-            openMenu.classList.toggle("d-none");
-        })
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

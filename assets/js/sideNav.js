@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburgerButton = document.getElementById("hamburger-button");
-    const closeButton = document.getElementById("close-button");
-    const sideNav = document.getElementById("side-nav");
+$(document).ready(function() {
+    const $hamburgerButton = $("#hamburger-button");
+    const $closeButton = $("#close-button");
+    const $sideNav = $("#side-nav");
 
-    hamburgerButton.addEventListener("click", () => {
-        sideNav.classList.add("open");
+    $hamburgerButton.on("click", function() {
+        $sideNav.addClass("open");
     });
 
-    closeButton.addEventListener("click", () => {
-        sideNav.classList.remove("open");
+    $closeButton.on("click", function() {
+        $sideNav.removeClass("open");
     });
-})
+});

@@ -1,117 +1,105 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Stammhof Albers</title>
+    <meta name="author" content="Jan Albers" />
+    <meta name="robots" content="index, follow" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="shortcut icon" href="assets/img/square-logo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/sites.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="assets/js/nav.js"></script>
     <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/sideNav.js"></script>
 </head>
 <body>
-<div class="min-h">
-    <div class="sticky-top bg-white z-100">
-        <nav class="navbar navbar-expand-xl">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo_black.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler navbar-toggle" type="button" id="hamburger-button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a></li>
-<!--                        <li class="nav-item"><a class="nav-link nav-link-ltr " href="bauernhof.html">Der Bauernhof</a></li>-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-link-ltr" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">Die Ferienwohnungen</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-details.html">Details</a></li>
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-preise.html">Preise</a></li>
-                                <li><a class="nav-link nav-link-ltr" href="ferienwohnung-fotos.html">Fotos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="aktivitaeten.html">Aktivitäten</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="fotos.html">Fotos</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr active" href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="side-nav" class="side-nav relative">
-            <a class="sidenav-logo" href="index.html">
-                <img src="assets/img/logo_black.png" alt="Logo">
+<div class="relative">
+    <nav id="navbar" class="navbar scroll">
+        <div class="navbar-logo">
+            <a href="index.html" class="">
+                <img src="assets/img/logo_white.png" alt="" class="logo">
             </a>
-            <p id="close-button" class="close-button">x</p>
-            <ul class="sidenav-links">
-                <li class="nav-item"><a class="navbar-link" aria-current="page" href="index.html">Home</a></li>
-<!--                <li class="nav-item"><a class="navbar-link" href="bauernhof.html">Der Bauernhof</a></li>-->
-                <li id="closedMenu" class="nav-item none">
-                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏵</p>
-                </li>
-                <li id="openMenu" class="nav-item none d-none">
-                    <p class="navbar-link nav-dropdown">Die Ferienwohnungen ⏷</p>
-                    <ul class="sidenav-sub-menu">
-                        <li><a class="navbar-link text-black" href="ferienwohnung-details.html">Details</a></li>
-                        <li><a class="navbar-link text-black" href="ferienwohnung-preise.html">Preise</a></li>
-                        <li><a class="navbar-link text-black" href="ferienwohnung-fotos.html">Fotos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="navbar-link" href="aktivitaeten.html">Aktivitäten</a></li>
-                <li class="nav-item"><a class="navbar-link" href="fotos.html">Fotos</a></li>
-                <li class="nav-item active"><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
+        </div>
+        <button id="hamburger-button" class="navbar-burger">☰</button>
+        <ul class="navbar__links">
+            <li><a class="navbar-link" href="index.html">Home</a></li>
+            <li><a class="navbar-link dropdown-button">Die Ferienwohnungen</a></li>
+            <li><a class="navbar-link" href="aktivitaeten.html">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="fotos.html">Fotos</a></li>
+        </ul>
+        <div class="navbar__button">
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+    <div class="dropdown">
+        <ul>
+            <li><a class="navbar-link" href="ferienwohnung-details.html">Details</a></li>
+            <li><a class="navbar-link" href="ferienwohnung-preise.html">Preise</a></li>
+            <li><a class="navbar-link" href="ferienwohnung-fotos.html">Fotos</a></li>
+        </ul>
+    </div>
+    <div id="side-nav" class="side-nav relative">
+        <p class="sidenav-logo">
+            <a href="index.html" class="">
+                <img src="assets/img/logo_white.png" alt="">
+            </a>
+        </p>
+        <p id="close-button" class="close-button">x</p>
+        <ul class="sidenav-links">
+            <li class="active"><a class="navbar-link" href="index.html">Home</a></li>
+            <li><a class="navbar-link" style="white-space: nowrap;" href="#">Die Ferienwohnungen</a></li>
+            <li><a class="navbar-link" href="aktivitaeten.html">Aktivitäten</a></li>
+            <li><a class="navbar-link" href="fotos.html">Fotos</a></li>
+            <li><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+    <div class="hero-container">
+        <div class="hero" >
+            <img src="assets/img/placeholder.webp">
+        </div>
+        <div class="image-overlay"></div>
+        <div class="text-container fade-in">
+            <p class="title title-grow">Kontakt</p>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="scroll col-lg-6 contact-div">
+            <p><i class="bi bi-person-fill me-3"></i>Hermann Albers</p>
+            <p><i class="bi bi-geo-alt-fill me-3"></i>Steddorfer Strasse 42, 27404 Steddorf</p>
+            <p class="link"><i class="bi bi-telephone-fill me-3"></i><a href="tel:04287 275">04287 275</a></p>
+            <p class="link"><i class="bi bi-envelope-at-fill me-3"></i><a href="mailto:info@stammhof-albers.de">info@stammhof-albers.de</a></p>
+            <br>
+            <p class="bold">Anreise:</p>
+            <ul>
+                <li>A1 Hamburg-Bremen, Abfahrt Sittensen, Ippensen, Sellhorn Steddorf</li>
+                <li>A1 Abfahrt Bokel, Richtung Zeven, Buxtehude, Steddorf</li>
             </ul>
+            <p>Ein grosser Parkplatz mit viel Platz, auch für grössere Fahrzeuge, ist direkt auf dem Hof vorhanden.</p>
+        </div>
+        <div class="scroll contact-div">
+            <div id="map"></div>
         </div>
     </div>
-    <div class="text-container">
-        <p class="title p-5 text-center scroll">Kontakt</p>
-        <div class="row">
-            <div class="scroll col-lg-6 contact-div">
-                <p><i class="bi bi-person-fill me-3"></i>Hermann Albers</p>
-                <p><i class="bi bi-geo-alt-fill me-3"></i>Steddorfer Strasse 42, 27404 Steddorf</p>
-                <p><i class="bi bi-telephone-fill me-3"></i><a href="tel:04287 275">04287 275</a></p>
-                <p><i class="bi bi-envelope-at-fill me-3"></i><a href="mailto:info@stammhof-albers.de">info@stammhof-albers.de</a></p>
-                <br>
-                <p class="fw-bold">Anreise:</p>
-                <ul>
-                    <li>A1 Hamburg-Bremen, Abfahrt Sittensen, Ippensen, Sellhorn Steddorf</li>
-                    <li>A1 Abfahrt Bokel, Richtung Zeven, Buxtehude, Steddorf</li>
-                </ul>
-                <p>Ein grosser Parkplatz mit viel Platz, auch für grössere Fahrzeuge, ist direkt auf dem Hof vorhanden.</p>
-            </div>
-            <div class="scroll col-lg-6">
-                <div id="map"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="footer">
-    <div class="row g-0 mt-3 footer-grid d-flex">
-        <hr>
-        <div class="col-md-8 col-12 d-flex align-items-center">
-            <p>Copyright © Stammhof Albers - H. Albers</p>
-        </div>
-        <div class="col-md-4 col-12 d-flex justify-content-md-end justify-content-start">
-            <a class="d-inline-flex footer-link footer-link-ltr" href="impressum.html">Impressum</a>
-            <a class="d-inline-flex footer-link footer-link-ltr" href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+    <div class="footer">
+        <div class="footer-copyright">© 2025 <a class="mail-link" href="mailto:info@stammhof-albers.de">Stammhof Albers</a></div>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
         </div>
     </div>
 </div>
 <script>
-    const hamburgerButton = document.getElementById("hamburger-button");
-    const closeButton = document.getElementById("close-button");
-    hamburgerButton.addEventListener("click", () => {
-        document.getElementById("side-nav").classList.toggle("open");
-    });
-    closeButton.addEventListener("click", () => {
-        document.getElementById("side-nav").classList.toggle("open");
-    });
-
     var mapOptions = {
         center: [53.350704, 9.402039],
         zoom: 13
@@ -125,19 +113,6 @@
     var marker = L.marker([53.350704, 9.402039]);
 
     marker.addTo(map);
-
-    const closedMenu = document.getElementById("closedMenu");
-    const openMenu = document.getElementById("openMenu");
-
-    const buttons = document.getElementsByClassName("nav-dropdown");
-    Array.from(buttons).forEach(button => {
-        button.addEventListener("click", () => {
-            console.log("clicked");
-            closedMenu.classList.toggle("d-none");
-            openMenu.classList.toggle("d-none");
-        })
-    });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

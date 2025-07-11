@@ -12,5 +12,6 @@
     <orderEntry type="library" name="@splidejs/splide" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
     <orderEntry type="library" name="flowbite" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

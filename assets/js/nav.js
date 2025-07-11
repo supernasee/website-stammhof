@@ -1,84 +1,77 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-    const navbar = document.querySelector(".navbar");
-    const logo = document.querySelector(".logo");
-    const navLinks = navbar.querySelectorAll(".navbar-link");
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownButton = document.querySelector(".dropdown-button");
+$(document).ready(function(){
+    const navbar = $(".navbar");
+    const logo = $(".logo");
+    const navLinks = $(".navbar-link");
+    const dropdown = $(".dropdown");
+    const dropdownButton = $(".dropdown-button");
 
-    document.querySelectorAll('.navbar-link').forEach(el => {
-        el.style.setProperty('--label', `"${el.textContent}"`);
+    $('.navbar-link').each(function() {
+        $(this).css('--label', `"${$(this).text()}"`);
     });
 
-    if (window.scrollY > 10) {
-        navbar.classList.add("scrolled");
-        dropdown.classList.add("scrolled");
-        navLinks.forEach(link => link.classList.add("scrolled"));
-        logo.style.filter = "invert(1)";
+    if(!navbar.hasClass("active")){
+        function updateNavbar() {
+            if ($(window).scrollTop() > 10) {
+                navbar.addClass("scrolled");
+                dropdown.addClass("scrolled");
+                navLinks.addClass("scrolled");
+                logo.css("filter", "invert(1)");
+            } else {
+                navbar.removeClass("scrolled");
+                dropdown.removeClass("scrolled");
+                navLinks.removeClass("scrolled");
+                logo.css("filter", "none");
+            }
+
+            if ($(window).scrollTop() > 120) {
+                navbar.addClass("finished");
+                dropdown.addClass("finished");
+            } else {
+                navbar.removeClass("finished");
+                dropdown.removeClass("finished");
+            }
+        }
     } else {
-        navbar.classList.remove("scrolled");
-        dropdown.classList.remove("scrolled");
-        navLinks.forEach(link => link.classList.remove("scrolled"));
-        logo.style.filter = "none";
-    }
-    if (window.scrollY > 120) {
-        navbar.classList.add("finished");
-        dropdown.classList.add("finished");
-    } else {
-        navbar.classList.remove("finished");
-        dropdown.classList.remove("finished");
+        logo.css("filter", "invert(1)");
+        navLinks.addClass("scrolled");
+        navbar.addClass("finished");
+        dropdown.addClass("finished");
     }
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 10) {
-            navbar.classList.add("scrolled");
-            dropdown.classList.add("scrolled");
-            navLinks.forEach(link => link.classList.add("scrolled"));
-            logo.style.filter = "invert(1)";
-        } else {
-            navbar.classList.remove("scrolled");
-            dropdown.classList.remove("scrolled");
-            navLinks.forEach(link => link.classList.remove("scrolled"));
-            logo.style.filter = "none";
-        }
-        if (window.scrollY > 120) {
-            navbar.classList.add("finished");
-            dropdown.classList.add("finished");
-        } else {
-            navbar.classList.remove("finished");
-            dropdown.classList.remove("finished");
-        }
+    $(window).on('scroll', updateNavbar);
+    updateNavbar();
+
+    dropdownButton.on('click', function() {
+        $(this).children('a').toggleClass("active");
+        dropdown.toggleClass("active");
     });
 
-    dropdownButton.addEventListener("click", function () {
-        dropdownButton.classList.toggle("active");
-        dropdown.classList.toggle("active");
-    })
+    dropdownButton.on('mouseenter', function() {
+        $(this).children('a').addClass("active");
+        dropdown.addClass("active");
+    });
 
-    dropdownButton.addEventListener("mouseenter", function () {
-        dropdownButton.classList.add("active");
-        dropdown.classList.add("active");
-    })
-
-    dropdownButton.addEventListener("mouseleave", function () {
+    dropdownButton.on('mouseleave', function() {
         setTimeout(() => {
-            if(!dropdown.matches(':hover')) {
-                dropdownButton.classList.remove("active");
-                dropdown.classList.remove("active");
+            if (!dropdown.is(':hover')) {
+                dropdownButton.children('a').removeClass("active");
+                dropdown.removeClass("active");
             }
         }, 200);
-    })
+    });
 
-    dropdown.addEventListener("mouseenter", function () {
-        dropdownButton.classList.add("active");
-        dropdown.classList.add("active");
-    })
+    dropdown.on('mouseenter', function() {
+        dropdownButton.children('a').addClass("active");
+        dropdown.addClass("active");
+    });
 
-    dropdown.addEventListener("mouseleave", function () {
+    dropdown.on('mouseleave', function() {
         setTimeout(() => {
-            if(!dropdownButton.matches(':hover')) {
-                dropdownButton.classList.remove("active");
-                dropdown.classList.remove("active");
+            if (!dropdownButton.is(':hover')) {
+                dropdownButton.children('a').removeClass("active");
+                dropdown.removeClass("active");
             }
         }, 200);
-    })
-})
+    });
+
+});
