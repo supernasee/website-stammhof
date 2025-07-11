@@ -302,6 +302,10 @@ a {
     transform: translateX(1rem) ;
 }
 
+.sidenav-links li.disabled:hover {
+    transform: translateX(0) ;
+}
+
 .sidenav-links li::before {
     content: "→";
     margin-right: 1rem;
@@ -317,12 +321,24 @@ a {
     opacity: 1;
 }
 
+.sidenav-links li:hover.disabled::before {
+    opacity: 0;
+}
+
 .sidenav-links li.active {
     transform: translateX(1rem);
 }
 
 .sidenav-links li.active::before {
     opacity: 1;
+}
+
+.sidenav-links ul {
+    list-style: none;
+    margin-top: 1rem;
+    li {
+        margin-bottom: 1rem;
+    }
 }
 
 .footer {
