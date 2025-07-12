@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
 
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/index.css">
@@ -72,7 +74,21 @@
     </div>
     <div class="hero-container">
         <div class="hero" >
-            <img src="assets/img/hof-front.JPG">
+            <section id="image-carousel" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/img/index_1.JPG" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/index_2.JPG" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/img/index_3.JPG" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
         <div class="image-overlay"></div>
         <div class="text-container fade-in">
@@ -88,17 +104,6 @@
             <p>Es gibt vielfältige Möglichkeiten für Freizeit und Sport.</p>
             <p>Für Autos gibt es einen <strong>grossen Parkplatz</strong> mit genug Platz, auch für grössere Fahrzeuge.</p>
         </div>
-        <div class="grid">
-            <div class="grid-1 scroll">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="grid-2 scroll">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-            <div class="grid-3 scroll">
-                <img src="assets/img/placeholder.webp" class="img-fluid">
-            </div>
-        </div>
     </div>
     <div class="footer">
         <div class="footer-copyright">© 2025 <a class="mail-link" href="mailto:info@stammhof-albers.de">Stammhof Albers</a></div>
@@ -108,5 +113,21 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.splide').forEach(function (el) {
+            new Splide(el, {
+                type   : 'loop',
+                autoplay: true,
+                interval: 6000,
+                perPage: 1,
+                arrows: false,
+                pagination: false,
+                focus  : 'center'
+            }).mount();
+        });
+    });
+</script>
 </body>
 </html>

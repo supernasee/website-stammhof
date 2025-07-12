@@ -41,37 +41,38 @@ $(document).ready(function(){
     $(window).on('scroll', updateNavbar);
     updateNavbar();
 
-    dropdownButton.on('click', function() {
-        $(this).children('a').toggleClass("active");
-        dropdown.toggleClass("active");
-    });
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        dropdownButton.on('click', function() {
+            $(this).children('a').toggleClass("active");
+            dropdown.toggleClass("active");
+        });
+    } else {
+        dropdownButton.on('mouseenter', function() {
+            $(this).children('a').addClass("active");
+            dropdown.addClass("active");
+        });
 
-    dropdownButton.on('mouseenter', function() {
-        $(this).children('a').addClass("active");
-        dropdown.addClass("active");
-    });
+        dropdownButton.on('mouseleave', function() {
+            setTimeout(() => {
+                if (!dropdown.is(':hover')) {
+                    dropdownButton.children('a').removeClass("active");
+                    dropdown.removeClass("active");
+                }
+            }, 200);
+        });
 
-    dropdownButton.on('mouseleave', function() {
-        setTimeout(() => {
-            if (!dropdown.is(':hover')) {
-                dropdownButton.children('a').removeClass("active");
-                dropdown.removeClass("active");
-            }
-        }, 200);
-    });
+        dropdown.on('mouseenter', function() {
+            dropdownButton.children('a').addClass("active");
+            dropdown.addClass("active");
+        });
 
-    dropdown.on('mouseenter', function() {
-        dropdownButton.children('a').addClass("active");
-        dropdown.addClass("active");
-    });
-
-    dropdown.on('mouseleave', function() {
-        setTimeout(() => {
-            if (!dropdownButton.is(':hover')) {
-                dropdownButton.children('a').removeClass("active");
-                dropdown.removeClass("active");
-            }
-        }, 200);
-    });
-
+        dropdown.on('mouseleave', function() {
+            setTimeout(() => {
+                if (!dropdownButton.is(':hover')) {
+                    dropdownButton.children('a').removeClass("active");
+                    dropdown.removeClass("active");
+                }
+            }, 200);
+        });
+    }
 });
