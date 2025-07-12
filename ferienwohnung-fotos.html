@@ -169,21 +169,14 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.splide').forEach(function (el) {
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-                new Splide(el, {
-                    type   : 'loop',
-                    perPage: 1,
-                    perMove: 1,
-                    focus  : 'center'
-                }).mount();
-            }else{
-                new Splide(el, {
-                    type   : 'loop',
-                    perPage: 3,
-                    perMove: 1,
-                    focus  : 'center'
-                }).mount();
-            }
+            const isMobile = window.innerWidth <= 1080;
+
+            new Splide(el, {
+                type   : 'loop',
+                perPage: isMobile ? 1 : 3,
+                perMove: 1,
+                focus  : 'center'
+            }).mount();
         });
     });
 </script>

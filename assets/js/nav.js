@@ -41,7 +41,7 @@ $(document).ready(function(){
     $(window).on('scroll', updateNavbar);
     updateNavbar();
 
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (window.matchMedia("(pointer: coarse)").matches) {
         dropdownButton.on('click', function() {
             $(this).children('a').toggleClass("active");
             dropdown.toggleClass("active");
