@@ -15,7 +15,6 @@ a {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .navbar {
@@ -297,6 +296,7 @@ a {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sidenav-links li:hover {
