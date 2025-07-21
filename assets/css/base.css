@@ -556,6 +556,11 @@ a {
     grid-row: 3;
 }
 
+.grid div img {
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (min-width: 992px) {
     .content-container {
         padding-left: 5vw;
