@@ -296,7 +296,7 @@ a {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(54, 112, 54, 0.5);
 }
 
 .sidenav-links li:hover {
