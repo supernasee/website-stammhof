@@ -23,7 +23,7 @@ a {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 80px;
+    height: 90px;
     background-color: rgba(255, 255, 255, 0);
     transition: background-color 0.3s;
     display: flex;
@@ -34,12 +34,25 @@ a {
     z-index: 100;
 }
 
-.navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
+.white-navbar {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    height: 90px;
+    background-color: #fff;
+    transition: width .6s ease-in-out, border-radius 1s;
+    display: flex;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    z-index: 100;
+    border-radius: 0% 0% 0% 5% / 0% 0% 0% 40% ;
 }
 
-.navbar.finished {
-    background-color: rgba(255, 255, 255, 1);
+.white-navbar.scrolled {
+    width: 100vw;
+    border-radius: 0;
 }
 
 .navbar-logo {
@@ -148,7 +161,7 @@ a {
     }
 
     .navbar-link {
-        color: white;
+        color: black;
         height: 30px;
         padding: 5px 15px;
         white-space: nowrap;
@@ -160,10 +173,6 @@ a {
         text-align: center;
         border-radius: 20px 20px 20px 20px;
         transition: color 0.8s ease;
-    }
-
-    .navbar-link.scrolled {
-        color: black;
     }
 
     .navbar-link::before {
@@ -200,7 +209,7 @@ a {
     height: 150px;
     background-color: rgba(255, 255, 255, 1);
     transition: all 0.8s;
-    border-radius: 15% / 20% ;
+    border-radius: 0 0 15% 15% / 0 0 20% 20%;
     justify-content: center;
     align-items: center;
 }
@@ -225,11 +234,6 @@ a {
 }
 
 .dropdown.scrolled {
-    border-radius: 0 0 15% 15% / 0 0 20% 20%;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.dropdown.finished {
     background-color: rgba(255, 255, 255, 1);
 }
 

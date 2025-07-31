@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const navbar = $(".navbar");
+    const white_navbar = $(".white-navbar");
     const logo = $(".logo");
     const navLinks = $(".navbar-link");
     const dropdown = $(".dropdown");
@@ -9,32 +9,22 @@ $(document).ready(function(){
         $(this).css('--label', `"${$(this).text()}"`);
     });
 
-    if(!navbar.hasClass("active")){
+    if(!white_navbar.hasClass("active")){
         function updateNavbar() {
             if ($(window).scrollTop() > 10) {
-                navbar.addClass("scrolled");
+                white_navbar.addClass("scrolled");
                 dropdown.addClass("scrolled");
-                navLinks.addClass("scrolled");
                 logo.css("filter", "invert(1)");
             } else {
-                navbar.removeClass("scrolled");
+                white_navbar.removeClass("scrolled");
                 dropdown.removeClass("scrolled");
-                navLinks.removeClass("scrolled");
                 logo.css("filter", "none");
-            }
-
-            if ($(window).scrollTop() > 120) {
-                navbar.addClass("finished");
-                dropdown.addClass("finished");
-            } else {
-                navbar.removeClass("finished");
-                dropdown.removeClass("finished");
             }
         }
     } else {
         logo.css("filter", "invert(1)");
         navLinks.addClass("scrolled");
-        navbar.addClass("finished");
+        white_navbar.addClass("finished");
         dropdown.addClass("finished");
     }
 
