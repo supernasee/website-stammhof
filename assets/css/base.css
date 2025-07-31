@@ -399,7 +399,7 @@ a {
     opacity: 0;
 }
 
-.content-container {
+.picture-container {
     position: relative;
     z-index: 5;
     width: 100%;
@@ -408,6 +408,20 @@ a {
     padding-left: 5vw;
     padding-right: 5vw;
     box-sizing: border-box;
+}
+
+.content-container {
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+    width: 70vw;
+    margin: 0 auto 40px auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .content-container {
+        width: 50vw;
+    }
 }
 
 .hero-container {
@@ -567,11 +581,6 @@ a {
 }
 
 @media (min-width: 992px) {
-    .content-container {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
     .grid img {
         width: 25vw;
     }
