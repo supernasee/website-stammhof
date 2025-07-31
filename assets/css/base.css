@@ -39,7 +39,7 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    width: 40vw;
+    width: 100vw;
     height: 90px;
     background-color: #fff;
     transition: width .6s ease-in-out, border-radius 1s;
@@ -47,7 +47,7 @@ a {
     padding: 0 2rem;
     box-sizing: border-box;
     z-index: 100;
-    border-radius: 0% 0% 0% 5% / 0% 0% 0% 40% ;
+    border-radius: 0;
 }
 
 .white-navbar.scrolled {
@@ -59,7 +59,7 @@ a {
     margin-top: 7px;
     height: 55px;
     width: 138px;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -69,7 +69,7 @@ a {
 }
 
 .logo {
-    transition: filter 0.8s;
+    transition: filter 1.2s;
 }
 
 .navbar__links {
@@ -92,6 +92,15 @@ a {
 }
 
 @media (min-width: 1080px) {
+    .white-navbar {
+        width: 770px;
+        border-radius: 0% 0% 0% 5% / 0% 0% 0% 40% ;
+    }
+
+    .navbar-logo {
+        color: white;
+    }
+
     .navbar__links {
         list-style: none;
         display: flex;

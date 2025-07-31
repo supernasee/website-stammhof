@@ -9,23 +9,16 @@ $(document).ready(function(){
         $(this).css('--label', `"${$(this).text()}"`);
     });
 
-    if(!white_navbar.hasClass("active")){
-        function updateNavbar() {
-            if ($(window).scrollTop() > 10) {
-                white_navbar.addClass("scrolled");
-                dropdown.addClass("scrolled");
-                logo.css("filter", "invert(1)");
-            } else {
-                white_navbar.removeClass("scrolled");
-                dropdown.removeClass("scrolled");
-                logo.css("filter", "none");
-            }
+    function updateNavbar() {
+        if ($(window).scrollTop() > 10) {
+            white_navbar.addClass("scrolled");
+            dropdown.addClass("scrolled");
+            logo.css("filter", "invert(1)");
+        } else {
+            white_navbar.removeClass("scrolled");
+            dropdown.removeClass("scrolled");
+            logo.css("filter", "none");
         }
-    } else {
-        logo.css("filter", "invert(1)");
-        navLinks.addClass("scrolled");
-        white_navbar.addClass("finished");
-        dropdown.addClass("finished");
     }
 
     $(window).on('scroll', updateNavbar);
