@@ -32,4 +32,34 @@
     z-index: 1;
     height: 100svh;
     width: 100vw;
+    pointer-events: none;
+}
+
+.splide__pagination {
+    z-index: 100;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    pointer-events: auto;
+}
+
+.splide__pagination li button {
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 0;
+    background-color: white;
+    opacity: 1;
+    transform: scale(1) !important;
+}
+
+.splide__pagination li button:hover {
+    background-color: #395439;
+    opacity: 1;
+}
+
+.splide__pagination li button.is-active {
+    background-color: #395439 !important;
 }
