@@ -68,12 +68,6 @@ tr:nth-child(even) {
     z-index: 10;
 }
 
-.contact-div {
-    width: 100%;
-}
-
-@media (min-width: 1280px) {
-    .contact-div {
-        width: 70%;
-    }
+.contact {
+    margin-top: 60px;
 }
